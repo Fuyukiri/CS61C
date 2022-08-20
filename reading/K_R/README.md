@@ -1,0 +1,1 @@
+All solutions to exercise is in a file called exercise.c
