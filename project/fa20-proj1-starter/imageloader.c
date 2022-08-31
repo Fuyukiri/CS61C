@@ -33,6 +33,11 @@ Image *readData(char *filename)
 	FILE *fp;
 	fp = fopen(filename, "r");
 
+	if (!fp)
+	{
+		exit(-1);
+	}
+
 	fscanf(fp, "%s %u %u %u", format, &cols, &rows, &scale);
 
 	img->rows = rows;
@@ -40,10 +45,10 @@ Image *readData(char *filename)
 	Color **image = (Color **)malloc(rows * sizeof(Color *));
 	img->image = image;
 
-	for (int i = 0; i < rows; i++)
+	for (uint32_t i = 0; i < rows; i++)
 	{
 		image[i] = (Color *)malloc(cols * sizeof(Color));
-		for (int j = 0; j < cols; j++)
+		for (uint32_t j = 0; j < cols; j++)
 		{
 			fscanf(fp, "%hhu %hhu %hhu", &image[i][j].R, &image[i][j].G, &image[i][j].B);
 		}
@@ -60,9 +65,9 @@ void writeData(Image *image)
 	uint32_t rows = image->rows;
 	Color **img = image->image;
 	printf("P3\n%u %u\n255\n", cols, rows);
-	for (int i = 0; i < rows; i++)
+	for (uint32_t i = 0; i < rows; i++)
 	{
-		for (int j = 0; j < cols - 1; j++)
+		for (uint32_t j = 0; j < cols - 1; j++)
 		{
 			printf("%3hhu %3hhu %3hhu   ", img[i][j].R, img[i][j].G, img[i][j].B);
 		}
@@ -77,7 +82,7 @@ void freeImage(Image *image)
 	// uint32_t cols = image->cols;
 	uint32_t rows = image->rows;
 	Color **img = image->image;
-	for (int i = 0; i < rows; i++)
+	for (uint32_t i = 0; i < rows; i++)
 	{
 		free(img[i]);
 	}
