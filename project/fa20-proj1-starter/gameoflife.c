@@ -65,16 +65,10 @@ Color *evaluateOneCell(Image *image, int row, int col, uint32_t rule)
 
 	if (live)
 	{
-		for (int j = 0; j < 9; j++)
-		{
-			check_bit >>= 1;
-		}
+		check_bit >>= 9;
 	}
 
-	for (int j = 0; j < live_neighbor; j++)
-	{
-		check_bit >>= 1;
-	}
+	check_bit >>= live_neighbor;
 	check_bit &= 1;
 
 	if (check_bit)
