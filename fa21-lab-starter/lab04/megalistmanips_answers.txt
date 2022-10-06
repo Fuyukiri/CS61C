@@ -1,6 +1,6 @@
-1.
-2.
-3.
-4.
-5.
-6.
+1. wrong address, need use lw to load address
+2. wrong index, need be 4x of offset
+3. need save / load ra and t1 before jump to s1 function
+4. load address of next pointer should use lw
+5. put the address to a1 should use mv
+6. forget to return in done
