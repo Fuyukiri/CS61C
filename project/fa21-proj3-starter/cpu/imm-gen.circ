@@ -445,6 +445,15 @@
       <a name="fanout" val="7"/>
       <a name="incoming" val="32"/>
     </comp>
+    <comp lib="0" loc="(380,640)" name="Constant">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(380,790)" name="Constant">
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(380,950)" name="Constant">
+      <a name="width" val="5"/>
+    </comp>
     <comp lib="0" loc="(480,100)" name="Tunnel">
       <a name="label" val="inst11_8"/>
       <a name="width" val="4"/>
@@ -493,6 +502,15 @@
     <comp lib="2" loc="(530,640)" name="Multiplexer">
       <a name="enable" val="false"/>
       <a name="select" val="3"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(430,630)" name="Shifter">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(430,780)" name="Shifter">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(430,940)" name="Shifter">
       <a name="width" val="32"/>
     </comp>
     <comp lib="5" loc="(146,92)" name="Text">
@@ -572,11 +590,17 @@
     <wire from="(240,780)" to="(300,780)"/>
     <wire from="(240,940)" to="(290,940)"/>
     <wire from="(330,160)" to="(360,160)"/>
-    <wire from="(330,940)" to="(480,940)"/>
+    <wire from="(330,940)" to="(360,940)"/>
     <wire from="(340,370)" to="(480,370)"/>
     <wire from="(340,500)" to="(470,500)"/>
-    <wire from="(340,630)" to="(490,630)"/>
-    <wire from="(340,780)" to="(470,780)"/>
+    <wire from="(340,630)" to="(350,630)"/>
+    <wire from="(340,780)" to="(360,780)"/>
+    <wire from="(350,620)" to="(350,630)"/>
+    <wire from="(350,620)" to="(390,620)"/>
+    <wire from="(360,770)" to="(360,780)"/>
+    <wire from="(360,770)" to="(390,770)"/>
+    <wire from="(360,930)" to="(360,940)"/>
+    <wire from="(360,930)" to="(390,930)"/>
     <wire from="(380,130)" to="(390,130)"/>
     <wire from="(380,140)" to="(400,140)"/>
     <wire from="(380,150)" to="(410,150)"/>
@@ -584,6 +608,9 @@
     <wire from="(380,170)" to="(410,170)"/>
     <wire from="(380,180)" to="(400,180)"/>
     <wire from="(380,190)" to="(390,190)"/>
+    <wire from="(380,640)" to="(390,640)"/>
+    <wire from="(380,790)" to="(390,790)"/>
+    <wire from="(380,950)" to="(390,950)"/>
     <wire from="(390,190)" to="(390,250)"/>
     <wire from="(390,250)" to="(480,250)"/>
     <wire from="(390,70)" to="(390,130)"/>
@@ -596,6 +623,9 @@
     <wire from="(410,130)" to="(480,130)"/>
     <wire from="(410,170)" to="(410,190)"/>
     <wire from="(410,190)" to="(480,190)"/>
+    <wire from="(430,630)" to="(490,630)"/>
+    <wire from="(430,780)" to="(470,780)"/>
+    <wire from="(430,940)" to="(480,940)"/>
     <wire from="(470,500)" to="(470,620)"/>
     <wire from="(470,620)" to="(490,620)"/>
     <wire from="(470,640)" to="(470,780)"/>
