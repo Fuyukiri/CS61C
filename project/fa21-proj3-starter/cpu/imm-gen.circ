@@ -449,6 +449,7 @@
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(380,790)" name="Constant">
+      <a name="value" val="0xc"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(380,950)" name="Constant">
