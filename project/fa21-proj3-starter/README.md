@@ -1,5 +1,5 @@
 # CS61CPU
 
-Look ma, I made a CPU! Here's what I did:
+Can pass all custom and provided tests
 
--
+If you want to check non-pipelined design, please check history commit!
