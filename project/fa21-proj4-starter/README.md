@@ -1,3 +1,13 @@
+To get the program running, first need to install cunit:
+```
+sudo apt-get install libcunit1 libcunit1-doc libcunit1-dev
+```
+Since 2022, python3.6 is no longer supported
+
+please update the makefile to `PYTHON = -I/usr/include/python3.8 -lpython3.8`
+
+
+
 # numc
 
 ### Provide answers to the following questions.
