@@ -38,7 +38,8 @@ double rand_double(double low, double high)
 void rand_matrix(matrix *result, unsigned int seed, double low, double high) 
 {
     srand(seed);
-    for (int i = 0; i < result->rows; i++) {
+    for (int i = 0; i < result->rows; i++) 
+    {
         for (int j = 0; j < result->cols; j++) {
             set(result, i, j, rand_double(low, high));
         }
@@ -303,6 +304,20 @@ int sub_matrix(matrix *result, matrix *mat1, matrix *mat2) {
 int mul_matrix(matrix *result, matrix *mat1, matrix *mat2) 
 {
     // Task 1.6 TODO
+    if (mat1->rows != result->rows || mat2->cols != result->cols || mat1->cols != mat2->rows || result->data == NULL) {
+        return -1;
+    }
+    for (int i = 0; i < mat1->rows ; i++) 
+    {
+        for (int j = 0; j < mat2->cols; j++) 
+        {
+            for (int k = 0; k < mat1->cols; k++) 
+            {
+                result->data[i * mat2->cols + j] += mat1->data[i * mat1->cols + k] * mat2->data[k * mat2->cols + j];
+            }
+        }
+    }
+    return 0;
 }
 
 /*
@@ -315,4 +330,39 @@ int mul_matrix(matrix *result, matrix *mat1, matrix *mat2)
 int pow_matrix(matrix *result, matrix *mat, int pow) 
 {
     // Task 1.6 TODO
+    if (mat->cols != mat->rows || result->rows != result->cols || result->data == NULL || pow < 0) {
+        return -1;
+    }
+    if (pow == 0) {
+        for (int i = 0; i < mat->rows; i++) 
+        {
+            for (int j = 0; j < mat->cols; j++) 
+            {
+                if (i == j) {
+                    result->data[i * mat->cols + j] = 1.0;
+                } else {
+                    result->data[i * mat->cols + j] = 0.0;
+                }
+            }
+        }
+    }
+    else if (pow == 1) {
+        add_matrix(result, result, mat);
+    }
+    else 
+    {
+        matrix *temp = NULL;
+        matrix *temp_zero = NULL;
+        allocate_matrix(&temp, mat->rows, mat->cols);
+        allocate_matrix(&temp_zero, mat->rows, mat->cols);
+        add_matrix(result, temp_zero, mat);
+        for (int i = 1; i < pow; i++) 
+        {
+            add_matrix(temp, temp_zero, result);
+            fill_matrix(result, 0);
+            mul_matrix(result, temp, mat);
+        }
+    }
+
+    return 0;
 }
