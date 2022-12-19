@@ -20,9 +20,9 @@ Due to some ucb platform upgrade some lab and proj can't run properly due to API
 |Labs link| Name| Progress|
 |------- |---| --- |
 |[lab 1 (2020 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa20/labs/lab01/) |C and GDB|[✅]|
-|[lab 2 (2020 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa20/labs/lab02/) |C and GDB|[✅]|
-|[lab 3 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab03/) |Advanced C, Valgrind|[✅]|
-|[lab 4 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab04/) |RISC-V Assembly |[✅]|
+|[lab 2 (2020 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa20/labs/lab02/) |Advanced C, Valgrind|[✅]|
+|[lab 3 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab03/) |RISC-V Assembly|[✅]|
+|[lab 4 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab04/) |RISC-V Functions, Pointers|[✅]|
 |[lab 5 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab05/) |Logisim |[✅]|
 |[lab 6 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab06/) |Pipelining, CPU |[✅]|
 |[lab 7 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab07/) |Caches |[✅]|
