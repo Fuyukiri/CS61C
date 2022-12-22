@@ -15,6 +15,17 @@ uninstall:
 	rm -rf build
 	xargs rm -rf < files.txt
 
+install_dumb:
+	if [ ! -f files2.txt ]; then touch files2.txt; fi
+	rm -rf build
+	xargs rm -rf < files2.txt
+	python3 setup_dumbpy.py install --record files2.txt
+
+uninstall_dumb:
+	if [ ! -f files2.txt ]; then touch files2.txt; fi
+	rm -rf build
+	xargs rm -rf < files2.txt
+
 clean:
 	rm -f *.o
 	rm -f test
