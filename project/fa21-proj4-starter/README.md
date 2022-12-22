@@ -6,7 +6,12 @@ Since 2022, python3.6 is no longer supported
 
 please update the makefile to `PYTHON = -I/usr/include/python3.8 -lpython3.8`
 
+Since we can't get dumbpy package, so I wrote one for test
 
+using following command to install dumbpy
+```
+make install_dumb
+```
 
 # numc
 
