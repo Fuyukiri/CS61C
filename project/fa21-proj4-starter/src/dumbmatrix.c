@@ -63,8 +63,7 @@ double get(matrix *mat, int row, int col)
  */
 void set(matrix *mat, int row, int col, double val) 
 {
-    int index = mat->cols * row + col;
-    mat->data[index] = val;
+    mat->data[row * (mat->cols) + col] = val;
 }
 
 /*

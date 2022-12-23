@@ -185,6 +185,24 @@ void abs_test(void) {
   deallocate_matrix(mat);
 }
 
+void abs_test2(void) {
+  matrix *result = NULL;
+  matrix *mat = NULL;
+  CU_ASSERT_EQUAL(allocate_matrix(&result, 2, 2), 0);
+  CU_ASSERT_EQUAL(allocate_matrix(&mat, 2, 2), 0);
+  set(mat, 0, 0, 10);
+  set(mat, 0, 1, -5.5);
+  set(mat, 1, 0, -111.111);
+  set(mat, 1, 1, 0);
+  abs_matrix(result, mat);
+  CU_ASSERT_EQUAL(get(result, 0, 0), 10);
+  CU_ASSERT_EQUAL(get(result, 0, 1), 5.5);
+  CU_ASSERT_EQUAL(get(result, 1, 0), 111.111);
+  CU_ASSERT_EQUAL(get(result, 1, 1), 0);
+  deallocate_matrix(result);
+  deallocate_matrix(mat);
+}
+
 void mul_square_test(void) {
   matrix *result = NULL;
   matrix *mat1 = NULL;
@@ -293,6 +311,7 @@ int main (void)
         (CU_add_test(pSuite, "mul_square_test", mul_square_test) == NULL) ||
         (CU_add_test(pSuite, "mul_non_square_test", mul_non_square_test) == NULL) ||
         (CU_add_test(pSuite, "abs_test", abs_test) == NULL) ||
+        (CU_add_test(pSuite, "abs_test2", abs_test2) == NULL) ||
         (CU_add_test(pSuite, "pow_test", pow_test) == NULL) ||
         (CU_add_test(pSuite, "alloc_fail_test", alloc_fail_test) == NULL) ||
         (CU_add_test(pSuite, "alloc_success_test", alloc_success_test) == NULL) ||
