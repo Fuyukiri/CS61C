@@ -33,6 +33,7 @@ Due to some ucb platform upgrade some lab and proj can't run properly due to API
 |[lab 9 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab09/) |Data-Level Parallelism |✅|
 |[lab 10 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab10/)|Thread-Level Parallelism |✅|
 |[lab 11 (2020 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa20/labs/lab11/)|Spark, MapReduce |🚧|
+
 ---
 ## Projects
 |Projects link|  Name|Progress|
@@ -40,4 +41,4 @@ Due to some ucb platform upgrade some lab and proj can't run properly due to API
 |[project 1 (2020 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa20/projects/proj1/) |Conway's Game of Life| ✅|
 |[project 2 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/projects/proj2/) |CS61Classify| ✅|
 |[project 3 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/projects/proj3/) |CS61CPU|✅|
-|[project 4 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/projects/proj4/) |Numc|🚧|
+|[project 4 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/projects/proj4/) |Numc|✅|
