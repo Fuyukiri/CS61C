@@ -32,7 +32,7 @@ Due to some ucb platform upgrade some lab and proj can't run properly due to API
 |[lab 8 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab08/) |OS, Virtual Memory |✅|
 |[lab 9 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab09/) |Data-Level Parallelism |✅|
 |[lab 10 (2021 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa21/labs/lab10/)|Thread-Level Parallelism |✅|
-|[lab 11 (2020 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa20/labs/lab11/)|Spark, MapReduce |🚧|
+|[lab 11 (2020 FALL)](https://inst.eecs.berkeley.edu/~cs61c/fa20/labs/lab11/)|Spark, MapReduce |✅|
 
 ---
 ## Projects
