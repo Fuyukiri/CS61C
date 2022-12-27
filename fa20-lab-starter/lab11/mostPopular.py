@@ -18,6 +18,8 @@ def sumCounts(a, b):
 """ TODO: Add functions here to determine the most popular word
     Note that Map/flatMap style functions take in one argument while Reduce functions take in two
 """
+def myFunc(arg):
+    return (arg[1], arg[0])
 
 def mostPopular(file_name, output="spark-wc-out-mostPopular"):
     sc = SparkContext("local[8]", "WordCount", conf=SparkConf().set("spark.hadoop.validateOutputSpecs", "false"))
@@ -26,8 +28,9 @@ def mostPopular(file_name, output="spark-wc-out-mostPopular"):
 
     counts = file.flatMap(splitDocument) \
                  .map(toPairs) \
-                 .reduceByKey(sumCounts) 
-                 # TODO: add appropriate extra transformations here
+                 .reduceByKey(sumCounts) \
+                 .map(myFunc) \
+                 .sortByKey(ascending=False)
 
     """ Takes the dataset stored in counts and writes everything out to OUTPUT """
     counts.coalesce(1).saveAsTextFile(output)
